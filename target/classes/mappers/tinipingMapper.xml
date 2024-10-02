@@ -1,0 +1,73 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.kr.tiniping.mappers.tinipingtMapper">
+  
+<!-- 1기 로얄  -->
+<select id="royal1_List" resultType="com.kr.tiniping.VO.TinipingVO">
+	select * from tiniping
+	where t_type = "로얄"
+	and t_gi = "1" 
+</select>
+
+<!-- 2기 로얄  -->
+<select id="royal2_List" resultType="com.kr.tiniping.VO.TinipingVO">
+	select * from tiniping
+	where t_type = "로얄"
+	and t_gi = "2" 
+</select>
+
+<select id="nomal1_List" resultType="com.kr.tiniping.VO.TinipingVO">
+	select * from tiniping
+	where t_type = "일반"
+	and t_gi = "1"
+</select>
+
+<!-- 2기 일반  -->
+<select id="nomal2_List" resultType="com.kr.tiniping.VO.TinipingVO">
+	select * from tiniping
+	where t_type = "일반"
+	and t_gi = "2"
+</select>
+
+<!-- 봉제인형 -->
+<select id="doll1_List" resultType="com.kr.tiniping.VO.ProductVO">
+	select * from product
+	where p_type = "인형"
+	limit 0, 3
+</select>
+
+<select id="doll2_List" resultType="com.kr.tiniping.VO.ProductVO">
+	select * from product
+	where p_type = "인형"
+	limit 3, 3
+</select>
+
+<!-- 장난감 -->
+<select id="toy1_List" resultType="com.kr.tiniping.VO.ProductVO">
+	select * from product
+	where p_type = "장난감"
+	limit 0, 3
+</select>
+
+<select id="toy2_List" resultType="com.kr.tiniping.VO.ProductVO">
+	select * from product
+	where p_type = "장난감"
+	limit 3, 3
+</select>
+
+<!-- 용품 -->
+<select id="pro1_List" resultType="com.kr.tiniping.VO.ProductVO">
+	select * from product
+	where p_type = "용품"
+	limit 0, 3
+</select>
+
+<select id="pro2_List" resultType="com.kr.tiniping.VO.ProductVO">
+	select * from product
+	where p_type = "용품"
+	limit 3, 3
+</select>
+
+</mapper>
